@@ -43,7 +43,6 @@ def login():
     username = request.form['username']
     password = request.form['password']
 
-    # Podatność: Brak uwierzytelniania i autoryzacji
     user = User.query.filter_by(username=username, password=password).first()
     if user:
         session['logged_in'] = True
